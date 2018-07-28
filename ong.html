@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD><link rel="stylesheet" type="text/css" href="/ong.css">
+<link href="ong.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<TITLE> Flow pattern and pressure drops in straight tubes and U-bends</TITLE>
+<center>
+  <H1> <a href="http://localhost:8000/How-To-Use.pdf" target="_blank">Flow pattern and pressure drops in straight tubes and U-bends</a></H1>
+</center>
+<div id="inputdata">
+  <form action="./UI.py?{QStr}" method="POST">
+    <!-- single curly brace replaced by Params['QStr'] -->
+    <p>Bend Diameter:<br />
+      <input type="text" name="BendDiameter" value="{BendDiameter:.4f}" onchange="this.form.submit()">
+      m</p>
+    <p>Mass flux:<br />
+      <input type="text" name="MassFlux" value="{MassFlux:.2f}" onchange="this.form.submit()">
+      kg/s/m<sup>2</sup></p>
+    <p>Vapor quality:<br />
+      <input type="text" name="VaporQuality" value="{VaporQuality:.2f}" onchange="this.form.submit()">
+    </p>
+    <p>Saturation Temperature:<br />
+      <input type="text" name="Tsat" value="{Tsat:.2f}" onchange="this.form.submit()">
+      &deg;C</p>
+    <p>Diameter:<br />
+      <input type="text" name="Dia" value="{Dia:.4f}" onchange="this.form.submit()">
+      m</p>
+    <p>Heat Flux:<br />
+      <input type="text" name="QFlux" value="{QFlux:.0f}" onchange="this.form.submit()">
+      W/m<sup>2</sup></p>
+    <p>Fluid<br />
+      <select name="Fluid" onchange="this.form.submit()">
+        
+		{FluidOpts}
+	
+      </select>
+    </p>
+    <p><a href="http://localhost:8000/Geometry.png" target="_blank">Geometry<a/><br />
+      <select name="Geometry" onchange="this.form.submit()">
+        
+		{GeometryOpts}
+	
+      </select>
+    </a></p>
+      <input type="submit" value="hit it !!">
+</form>
+  <p><span id="warning">{ErrStr}</span></p>
+  <p><span id="signature"><u>Code By</u>: 
+    Thomas D'hondt, Michael Gullberg, Steffen Hench, Ossama Hjaji, Robert Nederlof <br /></span>
+      <span id="tutor"><u>Tutor</u>: 
+Ricardo J. Da Silva Lima
+ </span></p>
+</div>
+<div id="curve"><a href="../{ImgPath}.svg"><img src="../{ImgPath}.png" alt="output plot"></a> 
+
+<div class="results"> 
+<form action="./UI.py?{QStr}" method="POST">
+<p><u>Output values (Red point)</u>:<br />
+<p>Vapor Quality:
+      <value>
+      {VaporQuality}
+      </value>
+      </p>
+<p>Pressure Gradiant:
+      <value>
+      {P_drop}
+      </value>
+      Pa/m</p>
+      </form>
+      </div>
+      
+      </div>
+</BODY>
+</HTML>
