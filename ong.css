@@ -1,43 +1,68 @@
-hbody{color:#333;margin:0;padding:5px;font:normal 87.5%/1.4 Arial,sans-serif;}
-a {color: rgb(0, 136, 0); text-decoration: none; background-color: inherit;}
-a:link:hover {text-decoration: underline;}
-input {width:100px}
-#curves{padding-top: 50px;width:300px; float:left;}
-#inputdata{
-	width:30px
-	padding-top: 0px;
-	float: left;
-	padding-left: 5px;
-	width: 280px;
-
+body {
+	color: #333;
+	margin: 0;
+	padding: 5px;
+	font: normal 87.5%/1.4 Arial, sans-serif;
 }
-#warning{background-color:yellow;}
-#signature{
+
+input {
+	width: 100px;
+}
+
+a {
+	color: rgb(0, 136, 0);
+	text-decoration: none;
+	background-color: inherit;
+}
+
+a:link:hover {
+	text-decoration: underline;
+}
+
+#flex-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    flex-flow: wrap;
+}
+
+#flex-container>div {
+    margin: 10px;
+    padding: 20px;
+}
+
+#inputdata {
+	width: 200px;
+}
+
+#signature {
 	font-size: 9px;
 	color: #C69;
 	font-weight: bold
 }
-#tutor{
+
+#tutor {
 	font-size: 9px;
 	color: #666;
 	font-weight: bold
 }
 
+#curves {
+	width: 300px;
+}
+
 .results {
 	background-color: #B7E2F2;
-	float: right;
-	height: auto;
-	width: auto;
 	border: 2px dashed #309;
-	clear: right;
-	margin-top: 30px;
-	margin-right: 20px;
-	margin-bottom: 5px;
-	margin-left: 5px;
 	font-weight: bold;
 	color: #306;
-	padding-top: 0px;
-	padding-right: 3px;
-	padding-bottom: 3px;
-	padding-left: 3px;
+	height: fit-content;
 }
+
+#warning {
+	background-color: yellow;
+}
+
+
